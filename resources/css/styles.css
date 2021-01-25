@@ -15,6 +15,7 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* reusable components */
@@ -237,6 +238,18 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
   border-bottom: 2px solid #e67322;
+}
+
+/*mobile nav*/
+.mobile-nav-icon {
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.menuNav {
+  font-size: 200%;
+  color: #fff;
 }
 
 /* Sticky navi */
@@ -583,6 +596,26 @@ footer p {
   margin-bottom: 20px;
 }
 
+/*Animations*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.js--wp-4 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1;
+}
+
 /* big tablets; from 1024 to 1200px */
 @media only screen and (max-width: 1200px) {
   .hero-text-box {
@@ -657,6 +690,37 @@ footer p {
   }
   .main-nav {
     display: none;
+  }
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+  .main-nav {
+    float: left;
+    margin-top: 35px;
+    margin-left: 25px;
+  }
+  .main-nav li {
+    display: block;
+  }
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 10px 0;
+    font-size: 100%;
+  }
+  .sticky .main-nav {
+    margin-top: 10px;
+  }
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    padding: 10px 0;
+  }
+  .mobile-nav-icon {
+    margin-top: 10px;
+  }
+  .sticky .menuNav {
+    color: #555;
   }
   h1 {
     font-size: 180%;
