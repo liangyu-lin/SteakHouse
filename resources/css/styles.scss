@@ -270,12 +270,13 @@ header {
 
 /*mobile nav*/
 .mobile-nav-icon {
-    float: right;
     margin-top: 30px;
+    float: right;
     cursor: pointer;
+    display: none;
 }
 
-.menuNav {
+.fa-bars,.fa-times {
     font-size: 200%;
     color: #fff;
 }
@@ -364,7 +365,7 @@ header {
 
 /* how it works */
 
-.section-steps {
+.section-cities {
     background-color: #f4f4f4;
 }
 
@@ -664,18 +665,18 @@ footer p {
 .js--wp-1,
 .js--wp-2,
 .js--wp-3 {
-    opacity: 0;
+    opacity: 1;
     animation-duration: 1s;
 }
 
-.js--wp-4{
- animation-duration: 1s;
+.js--wp-4 {
+    animation-duration: 1s;
 }
 
 .js--wp-1.animated,
 .js--wp-2.animated,
 .js--wp-3.animated {
-opacity: 1;
+    opacity: 1;
 }
 
 
@@ -801,26 +802,30 @@ opacity: 1;
     .main-nav li a:visited {
         display: block;
         border: 0;
-        padding: 10px 0; 
+        padding: 10px 0;
         font-size: 100%;
     }
 
 
-.sticky .main-nav {
-    margin-top: 10px;
-}
-
-.sticky .main-nav li a:link,
-.sticky .main-nav li a:visited {
-    padding: 10px 0;
-
-}
-    .mobile-nav-icon {
+    .sticky .main-nav {
         margin-top: 10px;
     }
 
-.sticky .menuNav {
-      color: #555;
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+
+    }
+
+   .sticky .mobile-nav-icon i {
+        margin-top: -20px;
+    }
+    .sticky .mobile-nav-icon .fa-times{
+        font-size: 200%;
+    }
+
+    .sticky i {
+        color: #555;
     }
 
 
@@ -878,6 +883,3 @@ opacity: 1;
         width: 100%
     }
 }
-
-
-

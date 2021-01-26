@@ -242,12 +242,13 @@ header {
 
 /*mobile nav*/
 .mobile-nav-icon {
-  float: right;
   margin-top: 30px;
+  float: right;
   cursor: pointer;
+  display: none;
 }
 
-.menuNav {
+.fa-bars, .fa-times {
   font-size: 200%;
   color: #fff;
 }
@@ -329,7 +330,7 @@ header {
 }
 
 /* how it works */
-.section-steps {
+.section-cities {
   background-color: #f4f4f4;
 }
 
@@ -600,7 +601,7 @@ footer p {
 .js--wp-1,
 .js--wp-2,
 .js--wp-3 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
@@ -716,10 +717,13 @@ footer p {
   .sticky .main-nav li a:visited {
     padding: 10px 0;
   }
-  .mobile-nav-icon {
-    margin-top: 10px;
+  .sticky .mobile-nav-icon i {
+    margin-top: -20px;
   }
-  .sticky .menuNav {
+  .sticky .mobile-nav-icon .fa-times {
+    font-size: 200%;
+  }
+  .sticky i {
     color: #555;
   }
   h1 {
